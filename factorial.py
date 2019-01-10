@@ -1,15 +1,22 @@
-value = int(input('Enter a value : '))
 
-check_number = value == 0 or value == 1
+def factorial(value):
+    
+    check_number = value == 0 or value == 1
 
-if (check_number):
-    result = 1
-    print('The result : {}! is {}'.format(value, result))
+    if (check_number):
+        result = 1
+        return result
 
-else:
-    factorial = 1
-    for count in range(1, value + 1):
-
-        factorial *= count
+    else:
+        fact = 1
+        for count in range(1, value + 1):
+            
+            fact *= count
         
-    print('The result : {}! is {}'.format(value, factorial))
+        return fact
+
+
+value = int(input('Enter a value : '))
+result = factorial(value)
+
+print('The result : {}! is {}'.format(value, result))
